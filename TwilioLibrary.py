@@ -40,7 +40,7 @@ def connect_wifi(wifi):
     print('Connection successful')
     print(station.ifconfig())
 def send_sms(recipient,message):
-    sender = '+1 833 7780 524'
+    sender = 'REDACTED'
     headers = {'Content-Type': 'application/x-www-form-urlencoded'}
     data = "To=" + recipient + "&From=" + sender + "&Body=" + message
 
@@ -59,7 +59,7 @@ def send_sms(recipient,message):
         print(response.status_code)
     response.close()
 def send_email(recipient_email, message, sender_app_password):
-    sender_email = 'elemedtufts@gmail.com'
+    sender_email = 'REDACTED'
     sender_name = 'EleMed Tufts'
     email_subject ='EleMed Medication Adherance Update'
 
@@ -74,10 +74,10 @@ def send_email(recipient_email, message, sender_app_password):
     smtp.quit()
 def phone_call(recipient):
     print("not implemented yet")
-    #fred = mqtt.MQTTClient('PicoTemp', 'io.adafruit.com', keepalive=60)
+    #fred = mqtt.MQTTClient('', '', keepalive=60)
     #fred.connect()
     #fred.set_callback(whenCalled)
-    #fred.publish('crosow24/feeds/temp',msg)
+    #fred.publish('',msg)
 def getUserData():
     response = requests.get(User_Info_url, headers = at_headers)
     print(response.status_code)
